@@ -1,0 +1,318 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: wrap;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Reset copied from https://piccalil.li/blog/a-modern-css-reset */
+/* END RESET */
+
+
+/* GLOBAL STYLES */
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30, 18%, 87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%); 
+
+    --clr-brown-800: hsl(14, 45%, 36%);
+
+    --clr-rose-800: hsl(332, 51%, 32%);
+    --clr-rose-50: hsl(330, 100%, 98%);
+
+    --font-size-paragraph: 1rem;
+    --font-size-h1big: 2.5rem;
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.25rem;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+
+    font-family: 'Outfit';
+    src: url(../assets/fonts/outfit/static/Outfit-Regular.ttf);
+}
+
+body {
+    background-color: var(--clr-stone-100);
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    color: var(--clr-stone-600);
+    font-weight: 400;
+}
+/* GLOBAL STYLES END */
+
+/* LAYOUT */
+.hero {
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+
+.header_wrapper {
+    background: var(--clr-white);
+    display: grid;
+    width: 23.4375rem;
+    padding: 2.5rem 2rem 0 2rem;
+}
+
+.image {
+    width: 23.4375rem;
+    padding:0;
+    margin: 0;
+}
+
+
+main {
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+.main_wrapper {
+    background: var(--clr-white);
+    display: grid;
+    width: 23.4375rem;
+    padding: 0 2rem 2rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.prep_time {
+    background: var(--clr-rose-50);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 2rem 0;    
+}
+
+.prep_time h3 {
+    font-size: var(--font-size-h3);
+    color: var(--clr-rose-800);
+    font-weight: 600;
+    margin: 0;
+}
+
+span {
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+    font-size: var(--font-size-h2);
+    font-weight: 400;
+    color: var(--clr-brown-800);
+    margin: 0 0 0.5rem 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--font-size-h1);
+    color: var(--clr-stone-900);
+    font-family: 'young serif', serif;
+    font-weight: 400;
+}
+
+.recipe_description {
+    margin-top: 1.5rem;
+}
+
+hr {
+    border: 1px solid var(--clr-stone-150);
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+}
+
+.values_title {
+    padding: 0 0 0 2rem;
+}
+
+.values {
+    color: var(--clr-brown-800);
+    font-weight: 700;
+    padding: 0;
+}
+
+table td {
+    line-height: 3rem;
+    border-bottom: 1px solid var(--clr-stone-150);
+}
+
+.no_border {
+    border-bottom: none;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+li {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+li::marker {
+    color: var(--clr-brown-800);
+}
+
+ol li::marker {
+    color: var(--clr-brown-800);
+    font-weight: 700;
+}
+
+/* LAYOUT END */
+
+/* TABLET MEDIA QUERIE */
+@media screen and (min-width: 48rem) {
+  .header_wrapper {
+    width: 38.5rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+  }
+
+  .main_wrapper {
+    width: 38.5rem;
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+
+  .image {
+    background: var(--clr-white);
+    width: 38.5rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+  }
+
+  .image img {
+    height: 18.75rem;
+    border-radius: 0.75rem;
+  }
+
+  h1{
+    font-size: var(--font-size-h1big);
+  }
+
+  .recipe_wrapper {
+    width: 100vw;
+    padding: 8rem 0;
+  }  
+}
+
+
+/* DESKTOP MEDIA QUERIE */
+
+@media screen and (min-width: 64rem) {
+  .header_wrapper {
+    width: 46rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+  }
+
+  .main_wrapper {
+    width: 46rem;
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+
+  .image {
+    background: var(--clr-white);
+    width: 46rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+  }
+
+  .image img {
+    height: 18.75rem;
+    border-radius: 0.75rem;
+  }
+
+  h1{
+    font-size: var(--font-size-h1big);
+  }
+
+  .recipe_wrapper {
+    width: 100vw;
+    padding: 8rem 0;
+  }  
+}
