@@ -25,7 +25,7 @@ This Frontend Mentor chanllenge is about coding a recipe page for 3 different ty
 ### Links
 
 - Solution URL: [Githup Code Solution](https://github.com/cacesasa/recipe_page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Githup page](https://cacesasa.github.io/recipe_page/)
 
 ## My process
 I took a mobile first approach by building the mobile version first, and then appying media queries for the tablet and desktop versions.
